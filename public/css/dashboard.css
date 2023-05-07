@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F3F3F3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    min-height: 90vh;
+    row-gap: 10px;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: start;
+}
+
+.row-2 {
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.resume-button {
+    font-size: 60px;
+    color: white;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    border: none;
+    background: hsla(250, 100%, 75%, 1);
+    cursor: pointer;
+    transition: 0.3s;
+    animation: pulse 1.5s ease infinite;
+}
+
+.resume-button::before {
+    content: "";
+    display: inline-block;
+    border-left: 0.3em solid;
+    border-top: 0.18em solid transparent;
+    border-bottom: 0.18em solid transparent;
+    margin-right: -0.08em;
+}
+
+.resume-button:hover {
+    background: hsla(250, 100%, 70%, 1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0em 0em 0em 0em hsla(250, 100%, 75%, 0.8);
+    }
+
+    100% {
+        box-shadow: 0em 0em 0em 0.3em hsla(250, 100%, 75%, 0);
+    }
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    border: black;
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+    font-weight: 600px;
+    color: #555;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim {
+    100% {
+        stroke-dashoffset: 165;
+    }
+}
+
+.row-3 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-4, .row-5 {
+    margin-top: 20px;
+}
+
+.card-img-top {
+    width: 400px;
+    height: 200px;
+}
